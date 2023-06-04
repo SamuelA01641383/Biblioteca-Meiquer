@@ -1,4 +1,4 @@
-/*DROP DATABASE BibliotecaMeiquer;*/
+/*DROP DATABASE IF EXISTS BibliotecaMeiquer;*/
 
 CREATE DATABASE IF NOT EXISTS BibliotecaMeiquer;
 
@@ -7,16 +7,16 @@ USE BibliotecaMeiquer;
 /*CONTENIDO*/
 CREATE TABLE IF NOT EXISTS Contenido (
 ID_Contenido INT NOT NULL AUTO_INCREMENT,
-Nombre VARCHAR(25),
-URL VARCHAR(25),
+Nombre VARCHAR(255),
+URL VARCHAR(255),
 Tipo int(1),
 PRIMARY KEY(ID_Contenido)
 );
 
-/*VIDEOS*/
+/*VIDEOS, Duracion en minutos*/
 CREATE TABLE IF NOT EXISTS Videos (
  ID_Contenido INT,
- Duracion VARCHAR(25),
+ Duracion INT,
  Canal VARCHAR(25),
  PRIMARY KEY(ID_Contenido)
 );
