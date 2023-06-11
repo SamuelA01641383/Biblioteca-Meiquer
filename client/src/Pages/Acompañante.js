@@ -1,10 +1,10 @@
-
+import Dashboard from "../Components/Dashboard";
 
 function Acompañante(){
 
     return(
         <div className = 'bg'>
-                <h1>aasasas </h1>
+                <Dashboard/>
         </div>
     )
 

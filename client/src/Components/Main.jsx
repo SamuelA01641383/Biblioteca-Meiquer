@@ -25,9 +25,9 @@ const Main= () => {
             <h2>Alumno</h2>
             </div>
             <div className='centertext'>
-            <a href="/Alumno">
+            <Link to ="/Alumno">
               <img src={alumno} alt="Botón 2" />
-            </a>
+            </Link>
             </div>
         </div>
         <div className='box'>

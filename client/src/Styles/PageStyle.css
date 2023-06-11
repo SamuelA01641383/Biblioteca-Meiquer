@@ -1,10 +1,96 @@
 .navbar{
-
-    height: 10px;
+    float: left;
+    height: 7vh;
+    width: 90%;
+    margin-top: 3vh;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: #193094;
+    border-radius: 10px;
   }
 .bg {
-    height: 100%;
+    float: left;
     width: 100%;
     background-color: #5271FD;
   }
+.left{
+  float: left;
+  width: 50%;
+  border-radius: 10%;
+  height: 100vh;
+}
+.leftcover{
+  float: left;
+  margin: 5%;
+  height: auto;
+  border-radius: 10%;
+  background-color: #193094;
+
+}
+.right{
+  margin-top: 5px;
+  float: left;
+  height: 90vh;
+  width: 50%;
+  
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.centrarboton{
+  margin: auto;
+  width: 55%;
+}
+button{
+  
+  margin-top: 1vh;
+  margin-left: 2vh;
+  font-size: 3vh;
+  padding: 0.20vh;
+  
+}
+.contenedorimg{
+  
+  float: left;
+  width: 40%;
+  height: 20vh;
+  margin: 5%;
+  border-color: rgb(72,85,104);
+  border-style: groove;
+  border-radius: 5px;
+}
+img{
+ 
+}
+.contenedortexto{
+  float: left;
+  height: 20vh;
+  width: 30%;
+  
+  
+
+}
+.portada{
+  float: left;
+  width: 50%;
+  height: 50vh;
+  border-color: rgb(72,85,104);
+  border-style: groove;
+  border-radius: 2%;
+}
+.textoderecha{
+  float: left;
+  width: 48%;
+  height: 60vh;
+  text-align: center;
+  margin-left: 1vh;
+
+}
+.botonesabajo{
+  float: right ;
+  margin-top: 10vh;
+  margin-right: 5%;
+  width: 40%;
+
+}
