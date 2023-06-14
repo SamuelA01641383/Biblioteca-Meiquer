@@ -26,7 +26,7 @@ const Main= () => {
             </div>
             <div className='centertext'>
             <Link to ="/Alumno">
-              <img src={alumno} alt="Botón 2" />
+              <img src={alumno} className='imgicon' alt="Botón 2" />
             </Link>
             </div>
         </div>
@@ -36,7 +36,7 @@ const Main= () => {
             </div>
             <div className='centertext'>
             <Link to ="/Acompañante">
-              <img src={acompa} alt="Botón 2" />
+              <img src={acompa} className='imgicon' alt="Botón 2" />
               </Link>
             </div>
         </div>
@@ -46,7 +46,7 @@ const Main= () => {
           </div>
           <div className='centertext'>
           <a href="/Educador">
-              <img src={educador} alt="Botón 2" />
+              <img src={educador} className='imgicon' alt="Botón 2" />
             </a>
           </div>
           

@@ -10,7 +10,7 @@ function Alumno(){
             
                 <Dashboard></Dashboard>
                 <LeftComponent></LeftComponent>
-                <RightComponent></RightComponent>
+                
                 
         </div>
     )
