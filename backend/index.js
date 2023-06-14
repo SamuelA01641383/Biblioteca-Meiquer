@@ -1,12 +1,15 @@
 import express from "express"
+import mysql from "mysql"
+import cors from "cors"
 
 const app = express()
+app.use(cors({origin:true}))
 
 // Cambiar username y contrasena en deploy
 const db = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password:"password",
+    user: "Samuel",
+    password:"12345",
     database: "BibliotecaMeiquer"
 })
 
