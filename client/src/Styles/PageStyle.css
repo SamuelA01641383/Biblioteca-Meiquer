@@ -1,43 +1,62 @@
+
+body{
+  margin: 0;
+  padding: 0;
+}
+.navbar2{
+  float: left;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: rgb(115,136,153);
+  padding-bottom: 1vh;
+}
 .navbar{
     float: left;
-    height: 7vh;
     width: 90%;
+    padding-bottom: 1vh;
     margin-top: 3vh;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: #193094;
+    background-color: rgb(115,136,153);
     border-radius: 10px;
   }
 .bg {
     float: left;
     width: 100%;
-    background-color: #5271FD;
+    background-color: rgb(247,239,238);
   }
 .left{
   float: left;
-  width: 50%;
+  width: 100%;
   border-radius: 10%;
   height: 100vh;
 }
-.leftcover{
+.contenedor{
   float: left;
-  margin: 5%;
-  height: auto;
-  border-radius: 10%;
-  background-color: #193094;
-
+  background-color: rgb(175,191,202);
+  width: 90%;
+  padding-bottom: 2.5vh;
+  margin-top: 2vh;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px;
 }
-.right{
-  margin-top: 5px;
+.contenedorimg{
   float: left;
-  height: 90vh;
-  width: 50%;
+  height: 15vh;
+  width: 25vh;
+  margin-top: 2.5vh;
+  margin-left: 2.5vh;
+}
+.contenedortexto{
   
+
+  margin-top: 2.5vh;
+  margin-left: 2.5vh;
+  margin-right: 2vh;
 }
-body{
-  margin: 0;
-  padding: 0;
-}
+
 .centrarboton{
   margin: auto;
   width: 55%;
@@ -50,47 +69,23 @@ button{
   padding: 0.20vh;
   
 }
-.contenedorimg{
-  
+.btt{
   float: left;
-  width: 40%;
-  height: 20vh;
-  margin: 5%;
-  border-color: rgb(72,85,104);
-  border-style: groove;
-  border-radius: 5px;
-}
-img{
- 
-}
-.contenedortexto{
-  float: left;
-  height: 20vh;
-  width: 30%;
+  margin-top: 1vh;
+  margin-left: 2vh;
+  font-size: 5vh;
+  padding: 0.20vh;
   
-  
-
 }
 .portada{
   float: left;
   width: 50%;
-  height: 50vh;
+  height: 10vh;
   border-color: rgb(72,85,104);
   border-style: groove;
   border-radius: 2%;
 }
-.textoderecha{
-  float: left;
-  width: 48%;
-  height: 60vh;
-  text-align: center;
-  margin-left: 1vh;
-
-}
-.botonesabajo{
-  float: right ;
-  margin-top: 10vh;
-  margin-right: 5%;
-  width: 40%;
-
+img{
+  height: 100%;
+  width: 100%;
 }

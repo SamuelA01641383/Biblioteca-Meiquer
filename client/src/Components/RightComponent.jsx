@@ -9,7 +9,7 @@ const RightComponent= () => {
                 <h2>a</h2>
             </div>
             <div className='textoderecha'>
-                <h2>lorem ipsum texto de ejemplo jajajajaj</h2>
+               
             </div>
             
             <div className='botonesabajo'>

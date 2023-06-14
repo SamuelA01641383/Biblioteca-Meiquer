@@ -3,9 +3,14 @@ import '../Styles/PageStyle.css'
 const Dashboard= () => {
 
     return(
-
+        <div>
+    <div className='navbar2'>
+        <h1 className='btt'>Selecciona el contenido: </h1>
+        <button className='btt'>Libros</button>
+        <button className='btt'>Videos</button>
+    </div>
     <div className='navbar'>
-        <div className='centrarboton'>
+        <div>
             <button>Ciencia</button>
             <button>Matematicas</button>
             <button>Tecnología</button>
@@ -15,7 +20,7 @@ const Dashboard= () => {
             <button>Arte</button>
             </div>
     </div>
-
+    </div>
     )
 
 }
