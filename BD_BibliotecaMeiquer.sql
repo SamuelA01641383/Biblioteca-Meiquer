@@ -80,3 +80,19 @@ CREATE TABLE IF NOT EXISTS Coleccion_Contenido (
 );
 ALTER TABLE Coleccion_Contenido ADD FOREIGN KEY(ID_Coleccion) REFERENCES Colecciones(ID_Coleccion);
 ALTER TABLE Coleccion_Contenido ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Contenido);
+
+DELIMITER //
+CREATE PROCEDURE sp_Details(IN id_param INT)
+BEGIN
+	SELECT Tipo INTO @TipoParam FROM Contenido where id=id_param; 
+	IF(@TipoParam = 1) THEN
+		SELECT * FROM Videos WHERE ID_Contenido = id_param;
+	ELSEIF(@TipoParam = 2) THEN 
+		SELECT * FROM Libros WHERE ID_Contenido = id_param;
+	ELSEIF(@TipoParam = 3) THEN 
+		SELECT * FROM Actividades WHERE ID_Contenido = id_param;
+	ELSEIF(@TipoParam = 4) THEN 
+		SELECT * FROM Referencias WHERE ID_Contenido = id_param;
+	END IF;
+END //
+DELIMITER ;
