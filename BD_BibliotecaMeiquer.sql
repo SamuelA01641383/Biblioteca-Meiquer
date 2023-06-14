@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS Contenido (
 ID_Contenido INT NOT NULL AUTO_INCREMENT,
 Nombre VARCHAR(255),
 URL VARCHAR(255),
-Tipo int(1),
+Tipo INT,
 PRIMARY KEY(ID_Contenido)
 );
 
@@ -17,7 +17,7 @@ PRIMARY KEY(ID_Contenido)
 CREATE TABLE IF NOT EXISTS Videos (
  ID_Contenido INT,
  Duracion INT,
- Canal VARCHAR(25),
+ Canal VARCHAR(255),
  PRIMARY KEY(ID_Contenido)
 );
 ALTER TABLE Videos ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Contenido);
@@ -25,7 +25,7 @@ ALTER TABLE Videos ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Conteni
 /*ACTIVIDADES*/
 CREATE TABLE IF NOT EXISTS Actividades (
  ID_Contenido INT,
- Descripcion VARCHAR(40),
+ Descripcion VARCHAR(255),
  PRIMARY KEY(ID_Contenido)
 );
 ALTER TABLE Actividades ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Contenido);
@@ -33,7 +33,7 @@ ALTER TABLE Actividades ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Co
 /*LIBROS*/
 CREATE TABLE IF NOT EXISTS Libros (
  ID_Contenido INT,
- Paginas int(3),
+ Paginas INT,
  PRIMARY KEY(ID_Contenido)
 );
 ALTER TABLE Libros ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Contenido);
@@ -41,8 +41,8 @@ ALTER TABLE Libros ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Conteni
 /*REFERENCIAS*/
 CREATE TABLE IF NOT EXISTS Referencias (
  ID_Contenido INT,
- NombreArticulo VARCHAR(25),
- NombrePagina VARCHAR(25),
+ NombreArticulo VARCHAR(255),
+ NombrePagina VARCHAR(255),
  PRIMARY KEY(ID_Contenido)
 );
 ALTER TABLE Referencias ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Contenido);
@@ -50,7 +50,7 @@ ALTER TABLE Referencias ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Co
 /*ETIQUETAS*/
 CREATE TABLE IF NOT EXISTS Etiquetas (
  ID_Etiqueta INT NOT NULL AUTO_INCREMENT,
- Nombre VARCHAR(25),
+ Nombre VARCHAR(255),
  PRIMARY KEY(ID_Etiqueta)
 );
 
@@ -67,7 +67,7 @@ ALTER TABLE Contenido_Etiqueta ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenid
 /*COLECCIONES*/
 CREATE TABLE IF NOT EXISTS Colecciones (
  ID_Coleccion INT NOT NULL AUTO_INCREMENT,
- Nombre VARCHAR(25),
+ Nombre VARCHAR(255),
  PRIMARY KEY(ID_Coleccion)
 );
 
