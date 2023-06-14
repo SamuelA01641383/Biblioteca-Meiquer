@@ -8,9 +8,9 @@ app.use(cors({origin:true}))
 // Cambiar username y contrasena en deploy
 const db = mysql.createConnection({
     host: "localhost",
-    user: "Samuel",
-    password:"12345",
-    database: "BibliotecaMeiquer"
+    user: "biblioteca",
+    password:"password",
+    database: "bibliotecameiquer"
 })
 
 // Alumnos solo pueden acceder a videos y libros

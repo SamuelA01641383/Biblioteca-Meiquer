@@ -2,7 +2,7 @@ import '../Styles/buttons.css'
 import alumno from '../imagenes/alumnos.png'
 import acompa from '../imagenes/Acompañante.png'
 import educador from '../imagenes/educador.png'
-import logo from '../imagenes/titulo2.png'
+import logo from '../imagenes/estacion_meiquer_logo.png'
 import { Link } from "react-router-dom";
 
 
@@ -11,8 +11,9 @@ const Main= () => {
 
         <div>
     <div className='title'>
-      <img src={logo} className='logo'></img>
-      
+      <Link to="/">
+        <img src={logo} className='logo'></img>
+      </Link>
     </div>
     
     <div className='middle'>
@@ -49,7 +50,6 @@ const Main= () => {
               <img src={educador} className='imgicon' alt="Botón 2" />
             </a>
           </div>
-          
 
         </div>
       </div>
