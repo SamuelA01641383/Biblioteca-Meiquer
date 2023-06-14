@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { Link } from "react-router-dom";
+import libros from '../imagenes/libros.png'
 
 const PORT = process.env.PORT || 3001;
 
@@ -22,37 +23,39 @@ const Videos = () => {
         fetchAlumno()
     },[])
 
-    
+   
+
     console.log(contenido)   
 
     return (
-        <div className='bg2'>
-        <div className='bg'>
-        <div className='header'>
-            <h1>Libros</h1>
-        </div>
-        
-        <div className='libros'>
+        <div className='left'>
             {
             contenido.map(libro=>(
                 <div className="contenido" key={libro.ID_Contenido}>
                     <div className='contenedor'>
-                    <div>   
+                    <div className='contenedorimg'>
+                    <img src={libros}></img>
+                </div>
+                        
+                        <div className='contenidotexto'>
+                        <h2>{libro.Nombre}</h2>
+                            <h3>{libro.URL}</h3>
+                            </div>
+                        
+                        <div>   
                     
                     </div>
-                    <div className='texto'>
-                    <h2>{libro.Nombre}</h2>
-                    <h3>{libro.URL}</h3>
-                    </div>
+                    
                     
                     </div>
                 </div>
                 
             ))}
-        </div>
+           
+    </div>
+
+            
         
-        </div>
-        </div>
     )
 }
 
