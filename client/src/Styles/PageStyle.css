@@ -8,6 +8,7 @@ body{
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  margin-top: 1vh;
   background-color: rgb(115,136,153);
   padding-bottom: 1vh;
 }
@@ -88,4 +89,9 @@ button{
 img{
   height: 100%;
   width: 100%;
+}
+
+.logo{
+  width: 10px;
+  height: 10px;
 }
