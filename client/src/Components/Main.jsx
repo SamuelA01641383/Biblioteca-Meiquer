@@ -4,7 +4,7 @@ import acompa from '../imagenes/Acompañante.png'
 import educador from '../imagenes/educador.png'
 import logo from '../imagenes/estacion_meiquer_logo.png'
 import { Link } from "react-router-dom";
-
+import NavBar from './NavBar'
 
 const Main= () => {
     return (
@@ -15,7 +15,6 @@ const Main= () => {
         <img src={logo} className='logo'></img>
       </Link>
     </div>
-    
     <div className='middle'>
     <div className='center'> 
         <h1>¿Quien eres?</h1>
@@ -23,7 +22,7 @@ const Main= () => {
       <div className='button-zone'>
         <div className='box'>
           <div className='centertextcircle'>
-            <h2>Alumno</h2>
+            <h2>Estudiante</h2>
             </div>
             <div className='centertext'>
             <Link to ="/Alumno">
