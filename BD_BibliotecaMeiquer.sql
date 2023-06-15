@@ -130,8 +130,8 @@ insert into videos(ID_Contenido, Duracion, Canal) values(10,4,"Brick Up");
 insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (11, "PAW Patrol. Mis primeras letras y numeros","https://www.planetadelibros.com.mx/libro-paw-patrol-mis-primeras-letras-y-numeros/374404",2);
 insert into libros(ID_Contenido, Paginas) values(11, 56);
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (12, "PAW Patrol. Mis primeras letras y numeros","https://www.planetadelibros.com.mx/libro-paw-patrol-mis-primeras-letras-y-numeros/374404",2);
-insert into libros(ID_Contenido, Paginas) values(12, 56);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (12, "El gran libro del espacio","https://www.planetadelibros.com.mx/libro-geronimo-stilton-el-gran-libro-del-espacio/360025",2);
+insert into libros(ID_Contenido, Paginas) values(12, 80);
 
 insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (13, "Las pistas de Blue y tú. ¡Arcoíris de pistas!","https://www.planetadelibros.com.mx/libro-las-pistas-de-blue-y-tu-arcoiris-de-pistas/371652",2);
 insert into libros(ID_Contenido, Paginas) values(13, 128);
