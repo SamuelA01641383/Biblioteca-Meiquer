@@ -48,6 +48,10 @@ app.get("/Videos", (req, res)=>{
     })
 })
 
+// Se define stored procedure en BD_BibliotecaMeiquer.sql
+// En lista solo se hace fetch de la tabla contenido
+// Cuando se da click en mas detalles, entonces se hace fetch de la tabla respectiva del tipo de contenido
+// Ejemplo Fila en contenido con columna "Tipo" 1 (Video) cuando le doy click a mas detalles hace fetch de la tabla "Videos" 
 app.get("/Alumno/:idparam", (req, res)=>{
     const q = "CALL sp_Details(${req.params.idparam});"
     db.query(q,(err,data)=>{
