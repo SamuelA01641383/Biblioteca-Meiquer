@@ -5,7 +5,7 @@ import logo from "../imagenes/estacion_meiquer_logo.png"
 const NavBar = () => {
   return (
     <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: "rgb(44,62,76)"}}>
             <div className="container-fluid">
                 <Link to='/'>
                     <img src={logo} alt='' width='10px' height="10px"/>
