@@ -44,7 +44,10 @@ const Videos = () => {
                     <div className='contenedor'> 
                     <Link to="/" style={{ textDecoration: 'none' }}>
             <div className="card" style={{width: "18rem"}}>
-                <img src="..." class="card-img-top" alt="..."/>
+            <iframe
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe> 
+                
             <div className="card-body">
                 <h5 className="card-title"><h2>{video.nomCont}</h2></h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
