@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div>
         <div className='navcolor'>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundColor: "rgb(44,62,76)"}}">
             <div className="container-fluid">
                 <Link to='/'>
                     <img src={logo} alt='' className='logo'/>
