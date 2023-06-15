@@ -47,16 +47,16 @@ app.get("/Acompanante", (req, res)=>{
     })
 })
 
-app.get("/Alumno/^[0-9]+$", (req, res)=>{
-    const q = "CALL sp_Details(1);"
+app.get("/Alumno/:idparam", (req, res)=>{
+    const q = "CALL sp_Details(${req.params.idparam});"
     db.query(q,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
     })
 })
 
-app.get("/Acompanante/^[0-9]+$", (req, res)=>{
-    const q = "CALL sp_Details(1);"
+app.get("/Acompanante/:idparam", (req, res)=>{
+    const q = "CALL sp_Details(${req.params.idparam});"
     db.query(q,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
