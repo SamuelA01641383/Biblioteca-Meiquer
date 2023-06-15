@@ -36,7 +36,10 @@ const Dashboard= () => {
                             <Videos></Videos>
                           </context.Provider>
 
-          case 2:  return <Libros></Libros>
+          case 2:  return <context.Provider value={etiqueta}>
+                             <Libros></Libros>
+                          </context.Provider>
+                          
           case 3:  return "Not yet";
           case 4:  return "Not yet";
           default: return "Not Found";
