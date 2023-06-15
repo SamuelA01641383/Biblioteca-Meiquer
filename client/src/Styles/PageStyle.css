@@ -33,15 +33,18 @@ body{
   border-radius: 10%;
   height: 100vh;
 }
-.contenedor{
+.contenedorDeContenedores{
   float: left;
-  background-color: rgb(175,191,202);
-  width: 90%;
-  padding-bottom: 2.5vh;
-  margin-top: 2vh;
   margin-left: 5%;
   margin-right: 5%;
-  border-radius: 10px;
+  width: 90%;
+  
+}
+.contenedor{
+  float: left;
+  padding-bottom: 2.5vh;
+  margin-top: 2vh;
+  margin-right: 2vh;
 }
 .contenedorimg{
   float: left;

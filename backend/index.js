@@ -21,6 +21,14 @@ app.get("/Alumno", (req, res)=>{
         return res.json(data)
     })
 })
+app.get("/Videos", (req, res)=>{
+    const q = "SELECT contenido.ID_Contenido, Nombre, URL, Duracion, Canal FROM contenido INNER JOIN videos WHERE contenido.Tipo =1 AND contenido.ID_Contenido = videos.ID_Contenido"
+    db.query(q,(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 
 // Acompanantes solo pueden acceder a videos, libros y actividades
 app.get("/Acompanante", (req, res)=>{

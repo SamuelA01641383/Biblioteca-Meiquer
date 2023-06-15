@@ -14,7 +14,7 @@ const Videos = () => {
         const fetchAlumno = async ()=>{
             try{
                 //http://localhost:8800/juegos
-                const res = await axios.get("http://localhost:8800/Alumno")
+                const res = await axios.get("http://localhost:8800/videos")
                 setContenido(res.data);
             }catch(err){
                 console.log(err)
@@ -29,36 +29,27 @@ const Videos = () => {
 
     return (
         <div className='left'>
+            <div className='contenedorDeContenedores'>
             {
             contenido.map(libro=>(
+            
                 <div className="contenido" key={libro.ID_Contenido}>
-                    <div className='contenedor'>
-                    <div className='contenedorimg'>
-                    <img src={libros}></img>
-                </div>
-                        
-                        <div className='contenidotexto'>
-                        <h2>{libro.Nombre}</h2>
-                            <h3>{libro.URL}</h3>
-                            </div>
-                        
-                        <div>   
-                    
-                    </div>
-                    
-                    
-                    </div>
-                </div>
-                
-            ))}
-        <div className="card" style={{width: "18rem"}}>
+                    <div className='contenedor'> 
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+            <div className="card" style={{width: "18rem"}}>
                 <img src="..." class="card-img-top" alt="..."/>
             <div className="card-body">
-                <h5 className="card-title">Card title</h5>
+                <h5 className="card-title"><h2>{libro.Nombre}</h2></h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
             </div>
-        </div>   
+            </div>
+                        </Link>
+            </div>
+            </div>
+            
+            ))}
+        </div>
+          
     </div>
 
             
