@@ -21,26 +21,31 @@ const Main= () => {
       </div>
       <div className='button-zone'>
         <div className='box'>
+        <Link to ="/Alumno" style={{ textDecoration: 'none' }}>
           <div className='centertextcircle'>
             <h2>Estudiante</h2>
             </div>
             <div className='centertext'>
-            <Link to ="/Alumno">
+            
               <img src={alumno} className='imgicon' alt="Botón 2" />
-            </Link>
+            
             </div>
+        </Link>
         </div>
         <div className='box'>
+        <Link to ="/Acompañante" style={{ textDecoration: 'none' }}>
           <div className='centertextcircle'>
             <h2>Acompañante</h2>
             </div>
             <div className='centertext'>
-            <Link to ="/Acompañante">
+            
               <img src={acompa} className='imgicon' alt="Botón 2" />
-              </Link>
+              
             </div>
+            </Link>
         </div>
         <div className='box'>
+        <Link to ="/Educador" style={{ textDecoration: 'none' }}>
           <div className='centertextcircle'>
             <h2>Educador</h2>
           </div>
@@ -49,7 +54,7 @@ const Main= () => {
               <img src={educador} className='imgicon' alt="Botón 2" />
             </a>
           </div>
-
+          </Link>
         </div>
       </div>
     </div>

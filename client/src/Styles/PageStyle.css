@@ -95,6 +95,9 @@ img{
 }
 
 .logo{
-  width: 10px;
-  height: 10px;
+  width: 2.5vh;
+  height: 2.5vh;
+}
+.navcolor{
+  background-color: rgb(72,85,104);
 }
