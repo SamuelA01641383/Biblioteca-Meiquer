@@ -9,8 +9,7 @@ function Alumno(){
     return(
         <div className = 'bg'>
                 <NavBar></NavBar>
-                <Dashboard></Dashboard>
-                <Videos></Videos>        
+                <Dashboard></Dashboard>       
                 
         </div>
     )

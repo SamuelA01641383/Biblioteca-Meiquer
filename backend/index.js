@@ -8,8 +8,8 @@ app.use(cors({origin:true}))
 // Cambiar username y contrasena en deploy
 const db = mysql.createConnection({
     host: "localhost",
-    user: "biblioteca",
-    password:"password",
+    user: "Samuel",
+    password:"12345",
     database: "bibliotecameiquer"
 })
 
@@ -29,6 +29,14 @@ app.get("/Videos", (req, res)=>{
     })
 })
 
+
+app.get("/Videos", (req, res)=>{
+    const q = "SELECT contenido.ID_Contenido, Nombre, URL, Duracion, Canal FROM contenido INNER JOIN videos WHERE contenido.Tipo =1 AND contenido.ID_Contenido = videos.ID_Contenido"
+    db.query(q,(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
 
 // Acompanantes solo pueden acceder a videos, libros y actividades
 app.get("/Acompanante", (req, res)=>{

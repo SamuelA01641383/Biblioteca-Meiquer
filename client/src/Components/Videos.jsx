@@ -14,7 +14,11 @@ const Videos = () => {
         const fetchAlumno = async ()=>{
             try{
                 //http://localhost:8800/juegos
+<<<<<<< HEAD
                 const res = await axios.get("http://localhost:8800/videos")
+=======
+                const res = await axios.get("http://localhost:8800/Videos")
+>>>>>>> 51f9a61104e0cee8dd0b7459ed9d88624db8d3fb
                 setContenido(res.data);
             }catch(err){
                 console.log(err)

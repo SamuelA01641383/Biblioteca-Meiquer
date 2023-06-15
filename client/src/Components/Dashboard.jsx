@@ -1,4 +1,5 @@
 import '../Styles/PageStyle.css'
+import Videos from './Videos'
 
 const Dashboard= () => {
 
@@ -20,6 +21,7 @@ const Dashboard= () => {
             <button>Arte</button>
             </div>
     </div>
+    <Videos></Videos> 
     </div>
     )
 
