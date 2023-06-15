@@ -96,3 +96,6 @@ BEGIN
 	END IF;
 END //
 DELIMITER ;
+
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (1, "las aventuras de sr arduino","google.com",1);
+insert into videos(ID_Contenido, Duracion, Canal) values(1,20,"Arduino");
