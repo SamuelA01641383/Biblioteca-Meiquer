@@ -34,8 +34,8 @@ const InformacionVideo = () => {
         navigate(-1);
     };
     return (
-        <div className='bg'>
-        <div className="bg2">
+        <div className='bg2'>
+        <div className="bg">
         <NavBar></NavBar>
         
         <div className="bg_infovideo">
