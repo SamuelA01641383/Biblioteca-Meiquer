@@ -11,6 +11,7 @@ body{
   margin-top: 1vh;
   background-color: rgb(115,136,153);
   padding-bottom: 1vh;
+  border-radius: 10px;
 }
 .navbar{
     float: left;
