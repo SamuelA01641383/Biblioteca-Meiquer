@@ -1,5 +1,4 @@
 import '../Styles/Informacion.css'
-import Alumno from '../imagenes/alumnos.png'
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
