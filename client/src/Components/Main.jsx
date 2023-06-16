@@ -10,14 +10,20 @@ const Main= () => {
     return (
 
         <div>
+          {/*
     <div className='title'>
+      
       <Link to="/">
         <img src={logo} className='logo'></img>
       </Link>
+    
     </div>
+    */}
+    <NavBar></NavBar>
     <div className='middle'>
     <div className='center'> 
-        <h1>¿Quien eres?</h1>
+        <br></br>
+        <h1>¿Quién eres?</h1>
       </div>
       <div className='button-zone'>
         <div className='box'>
