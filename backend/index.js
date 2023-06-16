@@ -85,11 +85,12 @@ app.get("/Referencias", (req, res)=>{
         return res.json(data)
     })
 })
+// SELECT c.contenido_ID, c.Nombre, c.URL, r.NombreArticulo, r.NombrePagina FROM contenido c INNER JOIN Referencias r USING(ID_contenido) INNER JOIN contenido_etiqueta ce USING(ID_contenido) INNER JOIN etiquetas e USING(ID_Etiqueta) WHERE c.ID_Contenido = r.ID_Contenido AND etiquetas.Nombre = ?
 
 
 app.get("/Referencias/:nombre", (req, res)=>{
     const nombre = req.params.nombre
-    const q = "SELECT contenido.ID_Contenido, contenido.Nombre as nomCont, etiquetas.Nombre, NombreArticulo, NombrePagina FROM contenido INNER JOIN Referencias USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = Referencias.ID_Contenido AND etiquetas.Nombre=?"
+    const q = "SELECT contenido.ID_Contenido, contenido.Nombre as nomCont, etiquetas.Nombre, NombreArticulo, NombrePagina FROM contenido INNER JOIN referencias ON referencias.ID_Contenido = contenido.ID_Contenido INNER JOIN contenido_etiqueta ON contenido_etiqueta.ID_Contenido=contenido.ID_Contenido INNER JOIN etiquetas ON etiquetas.ID_Etiqueta=contenido.ID_Contenido WHERE etiquetas.Nombre= ?;"
     db.query(q,[nombre],(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
