@@ -78,6 +78,15 @@ app.get("/Libros/:nombre", (req, res)=>{
     })
 })
 
+app.get("/Referencias/:nombre", (req, res)=>{
+    const nombre = req.params.nombre
+    const q = "SELECT contenido.ID_Contenido, contenido.Nombre as nomCont, etiquetas.Nombre, NombreArticulo, NombrePagina FROM contenido INNER JOIN Referencias USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = Referencias.ID_Contenido AND etiquetas.Nombre=?"
+    db.query(q,[nombre],(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 //Obtiene todos las actividades y sus detalles 
 app.get("/Actividades", (req, res)=>{
     const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, Descripcion FROM contenido INNER JOIN actividades WHERE contenido.Tipo =3 AND contenido.ID_Contenido = actividades.ID_Contenido"
