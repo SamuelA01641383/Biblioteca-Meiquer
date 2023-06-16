@@ -17,7 +17,7 @@ PRIMARY KEY(ID_Contenido)
 CREATE TABLE IF NOT EXISTS Videos (
  ID_Contenido INT,
  Duracion INT,
- Canal VARCHAR(255),
+ Canal TEXT,
  PRIMARY KEY(ID_Contenido)
 );
 ALTER TABLE Videos ADD FOREIGN KEY(ID_Contenido) REFERENCES Contenido(ID_Contenido);
@@ -97,34 +97,34 @@ BEGIN
 END //
 DELIMITER ;
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (1, "Misión Meiquer Espacial: Introducción","https://www.youtube.com/watch?v=Rvjdp6k2EVQ",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (1, "Misión Meiquer Espacial: Introducción","https://www.youtube.com/embed/Rvjdp6k2EVQ",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(1,1,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (2, "Construyendo el Ritmo: Trazos Musicales - Espiral Meiquer","https://www.youtube.com/watch?v=4AiFHsbS_fs",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (2, "Construyendo el Ritmo: Trazos Musicales - Espiral Meiquer","https://www.youtube.com/embed/4AiFHsbS_fs",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(2,4,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (3, "Construyendo el Ritmo: La Magia del Sonido - Espiral Meiquer","https://www.youtube.com/watch?v=sgTtC-fNhZE",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (3, "Construyendo el Ritmo: La Magia del Sonido - Espiral Meiquer","https://www.youtube.com/embed/sgTtC-fNhZE",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(3,4,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (4, "Construyendo el Ritmo: Viaje Musical - Espiral Meiquer","https://www.youtube.com/watch?v=9pG9msLq5hM",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (4, "Construyendo el Ritmo: Viaje Musical - Espiral Meiquer","https://www.youtube.com/embed/9pG9msLq5hM",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(4,4,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (5, "Construyendo el ritmo: Al Ritmo de los Tambores - Espiral Meiquer","https://www.youtube.com/watch?v=vlVjR_RRtT4",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (5, "Construyendo el ritmo: Al Ritmo de los Tambores - Espiral Meiquer","https://www.youtube.com/embed/vlVjR_RRtT4",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(5,4,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (6, "Explorando Mundos: Nuestro Cuerpo - Espiral Meiquer","https://www.youtube.com/watch?v=0gWbXkuaInU",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (6, "Explorando Mundos: Nuestro Cuerpo - Espiral Meiquer","https://www.youtube.com/embed/0gWbXkuaInU",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(6,5,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (7, "Explorando Mundos: Viajemos al Futuro - Espiral Meiquer","https://www.youtube.com/watch?v=k_dC1sj9sOE&pp=ygUXbWF0ZW1hdGljYXMgcGFyYSBuacOxb3M%3D",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (7, "Explorando Mundos: Viajemos al Futuro - Espiral Meiquer","https://www.youtube.com/embed/hZvA__EMBY0",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(7,3,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (8, "Mision Meiquer Espacial: Cierre","https://www.youtube.com/watch?v=I8hU6KXhsz4",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (8, "Mision Meiquer Espacial: Cierre","https://www.youtube.com/embed/I8hU6KXhsz4",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(8,1,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (9, "Mision Meiquer Espacial: #10 Bienvenido a casa, es tiempo de cambiar","https://www.youtube.com/watch?v=mtRhn-R7OVo",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (9, "Mision Meiquer Espacial: #10 Bienvenido a casa, es tiempo de cambiar","https://www.youtube.com/embed/mtRhn-R7OVo",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(9,4,"Meiquer TV");
 
-insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (10, "Mision Meiquer Espacial: #8 De vuelta a casa","https://www.youtube.com/watch?v=BNPBYDy_Hu8",1);
+insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (10, "Mision Meiquer Espacial: #8 De vuelta a casa","https://www.youtube.com/embed/BNPBYDy_Hu8",1);
 insert into videos(ID_Contenido, Duracion, Canal) values(10,3,"Meiquer TV");
 
 insert into contenido(ID_Contenido, Nombre, URL, Tipo) values (11, "PAW Patrol. Mis primeras letras y numeros","https://www.planetadelibros.com.mx/libro-paw-patrol-mis-primeras-letras-y-numeros/374404",2);
