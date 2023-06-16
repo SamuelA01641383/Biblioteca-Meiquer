@@ -78,6 +78,25 @@ app.get("/Libros/:nombre", (req, res)=>{
     })
 })
 
+//Obtiene todos las actividades y sus detalles 
+app.get("/Actividades", (req, res)=>{
+    const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, Descripcion FROM contenido INNER JOIN actividades WHERE contenido.Tipo =3 AND contenido.ID_Contenido = actividades.ID_Contenido"
+    db.query(q,(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
+//Obtiene todos las Actividades por filtro de 1 etiqueta 
+app.get("/Actividades/:nombre", (req, res)=>{
+    const nombre = req.params.nombre
+    const q = "SELECT contenido.ID_Contenido, contenido.Nombre AS nomCont, etiquetas.Nombre, Descripcion FROM contenido INNER JOIN actividades USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = contenido.ID_Contenido AND etiquetas.Nombre= ?"
+    db.query(q,[nombre],(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 // Se define stored procedure en BD_BibliotecaMeiquer.sql
 // En lista solo se hace fetch de la tabla contenido
 // Cuando se da click en mas detalles, entonces se hace fetch de la tabla respectiva del tipo de contenido
