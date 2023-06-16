@@ -39,15 +39,17 @@ const InformacionLibros = () => {
             {
                     contenido.map(v=>(
                     <div className='derecho'>
-                        <h1>Nombre: {v.Nombre}</h1>
-                        <h1>Paginas: {v.Paginas} </h1>
-                        <h2>Esto es la descripcion bababababababbabbababab   </h2>
+                        <h1>{v.Nombre}</h1>
+                        <h1>{v.Paginas} Paginas</h1>
+                        <h2>{v.Descripcion}</h2>
+                        <img src ={v.Imagen}></img>
+                        <div className='left'>
+            <a href={v.URL}>Descargar Libros</a>
+            </div>
                     </div>
                     ))
             }
-            <div className='left'>
-            <a href='https://hola.com'>Descargar Libros</a>
-            </div>
+            
            
             </div>
             <button className="bt_atras" onClick={handleGoBack}>Atrás</button>

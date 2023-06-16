@@ -10,6 +10,8 @@ const InformacionVideo = () => {
     const navigate = useNavigate();
     const location = useLocation()
     const [contenido, setContenido] = useState([])
+    var link;
+    // const [link, setLink] = useState("")
 
     const idVideo = location.pathname.split("/")[2]
     console.log(idVideo)
@@ -40,14 +42,15 @@ const InformacionVideo = () => {
         {
             contenido.map(v => (
             <div className="card_descripciones">
-                <h1 className="name">Nombre: {v.Nombre}</h1>
-                <h1 className="duration">Duracion: {v.Duracion} </h1>
-                <h2 className="description">Esto es la descripción bababababababbabbababab</h2>
+                <h1 className="name">{v.Nombre}</h1>
+                <h1 className="duration">Duracion: {v.Duracion} minuto/s </h1>
+                <h2 className="description">{v.Descripcion}</h2>
+               <div style={{display:"none"}}>{link = v.URL}</div>
             </div>
             ))
         }
         <div className="izquierda_video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3XKk-xBpB0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div className="cont_bt_atras">
                     <button className="bt_atras" onClick={handleGoBack}>Regresar</button>
                 </div>

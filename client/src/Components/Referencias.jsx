@@ -37,13 +37,13 @@ const Referencias = () => {
     return (
         <div className='left'>
             <div className='contenedorDeContenedores'>
-            <p>"Recibido Referencias;" {etiqueta}</p>
+           
             {
             contenido.map(Referencia=>(
             
                 <div className="contenido" key={Referencia.ID_Contenido}>
                     <div className='contenedor'> 
-                    <Link to="/" style={{ textDecoration: 'none' }}>
+                    <Link to={Referencia.URL} style={{ textDecoration: 'none' }}>
             <div className="card" style={{width: "18rem"}}>
                 <div className='centrar'>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmarks" width="100" height="100" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -57,7 +57,6 @@ const Referencias = () => {
             <div className="card-body">
                 <h5 className="card-title"><h2>{Referencia.nomCont}</h2></h5>
                 <p className="card-text">{Referencia.NombreArticulo}</p>
-                <p className="card-text">{Referencia.NombrePagina}</p>
             </div>
             </div>
                         </Link>

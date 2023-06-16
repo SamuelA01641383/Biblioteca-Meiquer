@@ -36,7 +36,6 @@ const Videos = () => {
     return (
         <div className='left'>
             <div className='contenedorDeContenedores'>
-            <p>"Recibido;" {etiqueta}</p>
             {
             contenido.map(video=>(
             
@@ -46,12 +45,12 @@ const Videos = () => {
             <div className="card" style={{width: "18rem"}}>
             
             <iframe
-                src="https://www.youtube.com/embed/mCdA4bJAGGk" >
+                src={video.URL} >
             </iframe> 
                 
             <div className="contenedortexto">
                 <h2 className='titulo'>{video.nomCont}</h2>
-                <p >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p>{video.Duracion} minuto/s</p>
             </div>
             </div>
                         </Link>

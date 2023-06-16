@@ -36,7 +36,6 @@ const Actividades = () => {
     return (
         <div className='left'>
             <div className='contenedorDeContenedores'>
-            <p>"Recibido Actividades;" {etiqueta}</p>
             {
             contenido.map(actividad=>(
             
@@ -44,10 +43,9 @@ const Actividades = () => {
                     <div className='contenedor'> 
                     <Link to={`/InformacionActividades/${actividad.ID_Contenido}`} style={{ textDecoration: 'none' }}>
             <div className="card" style={{width: "18rem"}}>
-                <img src="" className="card-img-top" alt="..."/>
+                <img src={actividad.Imagen} className="card-img-top" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title"><h2>{actividad.nomCont}</h2></h5>
-                <p className="card-text">{actividad.Descripcion}</p>
             </div>
             </div>
                         </Link>

@@ -52,7 +52,7 @@ app.get("/Video/:id", (req, res)=>{
 
 //Obtiene todos los videos y sus detalles 
 app.get("/Videos", (req, res)=>{
-    const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, Duracion, Canal FROM contenido INNER JOIN videos WHERE contenido.Tipo =1 AND contenido.ID_Contenido = videos.ID_Contenido"
+    const q = "SELECT contenido.ID_Contenido,contenido.Descripcion, Nombre AS nomCont, URL, Duracion, Canal FROM contenido INNER JOIN videos WHERE contenido.Tipo =1 AND contenido.ID_Contenido = videos.ID_Contenido"
     db.query(q,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -62,7 +62,7 @@ app.get("/Videos", (req, res)=>{
 //Obtiene todos los videos por filtro de 1 etiqueta 
 app.get("/Videos/:nombre", (req, res)=>{
     const nombre = req.params.nombre
-    const q = "SELECT contenido.ID_Contenido, contenido.Nombre AS nomCont, URL, Duracion, Canal, etiquetas.Nombre FROM contenido INNER JOIN videos USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = videos.ID_Contenido AND etiquetas.Nombre= ?;"
+    const q = "SELECT contenido.ID_Contenido,contenido.Descripcion, contenido.Nombre AS nomCont, URL, Duracion, Canal, etiquetas.Nombre FROM contenido INNER JOIN videos USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = videos.ID_Contenido AND etiquetas.Nombre= ?;"
     db.query(q,[nombre],(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -81,7 +81,7 @@ app.get("/Libro/:id", (req, res)=>{
 
 //Obtiene todos los libros y sus detalles 
 app.get("/Libros", (req, res)=>{
-    const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, Paginas FROM contenido INNER JOIN Libros WHERE contenido.Tipo =2 AND contenido.ID_Contenido = Libros.ID_Contenido"
+    const q = "SELECT contenido.ID_Contenido,contenido.Descripcion, Nombre AS nomCont, URL, Paginas,Imagen FROM contenido INNER JOIN Libros WHERE contenido.Tipo =2 AND contenido.ID_Contenido = Libros.ID_Contenido"
     db.query(q,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -91,7 +91,7 @@ app.get("/Libros", (req, res)=>{
 //Obtiene todos los libros por filtro de 1 etiqueta 
 app.get("/Libros/:nombre", (req, res)=>{
     const nombre = req.params.nombre
-    const q = "SELECT contenido.ID_Contenido, contenido.Nombre AS nomCont, etiquetas.Nombre, Paginas FROM contenido INNER JOIN libros USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = libros.ID_Contenido AND etiquetas.Nombre= ?;"
+    const q = "SELECT contenido.ID_Contenido,contenido.Descripcion, contenido.Nombre AS nomCont, etiquetas.Nombre, Paginas,Imagen FROM contenido INNER JOIN libros USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = libros.ID_Contenido AND etiquetas.Nombre= ?;"
     db.query(q,[nombre],(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -99,7 +99,7 @@ app.get("/Libros/:nombre", (req, res)=>{
 })
 
 app.get("/Referencias", (req, res)=>{
-    const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, NombreArticulo, NombrePagina FROM contenido INNER JOIN Referencias WHERE contenido.Tipo =4 AND contenido.ID_Contenido = Referencias.ID_Contenido"
+    const q = "SELECT contenido.ID_Contenido,contenido.Descripcion, Nombre AS nomCont, URL, NombreArticulo, NombrePagina FROM contenido INNER JOIN Referencias WHERE contenido.Tipo =4 AND contenido.ID_Contenido = Referencias.ID_Contenido"
     db.query(q,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -110,7 +110,7 @@ app.get("/Referencias", (req, res)=>{
 
 app.get("/Referencias/:nombre", (req, res)=>{
     const nombre = req.params.nombre
-    const q = "SELECT contenido.ID_Contenido, contenido.Nombre as nomCont, etiquetas.Nombre, NombreArticulo, NombrePagina FROM contenido INNER JOIN referencias USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = referencias.ID_Contenido AND etiquetas.Nombre= ?"
+    const q = "SELECT contenido.ID_Contenido,contenido.Descripcion, contenido.Nombre as nomCont, etiquetas.Nombre, NombreArticulo, NombrePagina FROM contenido INNER JOIN referencias USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = referencias.ID_Contenido AND etiquetas.Nombre= ?"
     db.query(q,[nombre],(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -130,7 +130,7 @@ app.get("/Actividad/:id", (req, res)=>{
 
 //Obtiene todos las actividades y sus detalles 
 app.get("/Actividades", (req, res)=>{
-    const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, Descripcion FROM contenido INNER JOIN actividades WHERE contenido.Tipo =3 AND contenido.ID_Contenido = actividades.ID_Contenido"
+    const q = "SELECT contenido.ID_Contenido,Imagen, Nombre AS nomCont, URL, Descripcion FROM contenido INNER JOIN actividades WHERE contenido.Tipo =3 AND contenido.ID_Contenido = actividades.ID_Contenido"
     db.query(q,(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
@@ -140,7 +140,7 @@ app.get("/Actividades", (req, res)=>{
 //Obtiene todos las Actividades por filtro de 1 etiqueta 
 app.get("/Actividades/:nombre", (req, res)=>{
     const nombre = req.params.nombre
-    const q = "SELECT contenido.ID_Contenido, contenido.Nombre AS nomCont, etiquetas.Nombre, Descripcion FROM contenido INNER JOIN actividades USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = actividades.ID_Contenido AND etiquetas.Nombre= ?"
+    const q = "SELECT contenido.ID_Contenido,contenido.Descripcion, Imagen,contenido.Nombre AS nomCont, etiquetas.Nombre, Descripcion FROM contenido INNER JOIN actividades USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = actividades.ID_Contenido AND etiquetas.Nombre= ?"
     db.query(q,[nombre],(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
