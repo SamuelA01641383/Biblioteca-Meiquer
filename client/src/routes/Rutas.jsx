@@ -14,7 +14,7 @@ const Rutas = () => {
         <Route path='/Acompañante' element = {<Acompañante/>} />
         <Route path='/Alumno' element = {<Alumno/>} />
         <Route path='/Educador' element = {<Educador/>} />
-        <Route path='/InformacionVideo' element = {<InformacionVideo/>} />
+        <Route path='/InformacionVideo/:id' element = {<InformacionVideo/>} />
         <Route path='/InformacionLibros' element = {<InformacionLibros/>} />
     </Routes>
     </BrowserRouter>

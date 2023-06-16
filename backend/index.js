@@ -40,6 +40,16 @@ app.get("/Maestro", (req, res)=>{
     })
 })
 
+//Obtiene 1 video
+app.get("/Video/:id", (req, res)=>{
+    const id = req.params.id
+    const q = "SELECT * FROM Videos  INNER JOIN contenido USING(ID_Contenido) WHERE videos.ID_Contenido = ?;"
+    db.query(q,[id],(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 //Obtiene todos los videos y sus detalles 
 app.get("/Videos", (req, res)=>{
     const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, Duracion, Canal FROM contenido INNER JOIN videos WHERE contenido.Tipo =1 AND contenido.ID_Contenido = videos.ID_Contenido"
