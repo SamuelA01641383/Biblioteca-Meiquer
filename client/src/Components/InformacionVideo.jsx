@@ -1,4 +1,4 @@
-import '../Styles/Informacion.css'
+import'../Styles/InformacionVideo.css'
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -32,26 +32,26 @@ const InformacionVideo = () => {
         navigate(-1);
     };
     return (
-        <div className='bg2'>
+        <div className="bg2">
         <NavBar></NavBar>
         
-            <div className='bg'>
-            <div className='izquierda'>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3XKk-xBpB0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div className="bg_infovideo">
+        {
+            contenido.map(v => (
+            <div className="card_descripciones">
+                <h1 className="name">Nombre: {v.Nombre}</h1>
+                <h1 className="duration">Duracion: {v.Duracion} </h1>
+                <h2 className="description">Esto es la descripción bababababababbabbababab</h2>
             </div>
-            {
-                    contenido.map(v=>(
-                    <div className='derecho'>
-                        <h1>Nombre: {v.Nombre}</h1>
-                        <h1>Duracion: {v.Duracion} </h1>
-                        <h2>Esto es la descripcion bababababababbabbababab   </h2>
-                    </div>
-                    ))
-                }
+            ))
+        }
+        <div className="izquierda_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3XKk-xBpB0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div className="cont_bt_atras">
+                    <button className="bt_atras" onClick={handleGoBack}>Regresar</button>
+                </div>
+            </div>
         </div>
-            
-            <button className="bt_atras" onClick={handleGoBack}>Atrás</button>
-
         </div>
     )
 
