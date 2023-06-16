@@ -42,7 +42,7 @@ const Videos = () => {
                 <div className="contenido" key={video.ID_Contenido}>
                     <div className='contenedor'> 
                     <Link to={`/InformacionVideo/${video.ID_Contenido}`} style={{ textDecoration: 'none' }}>
-            <div className="card" style={{width: "18rem"}}>
+            <div className="card" style={{width: "18rem", height: "17.5rem"}}>
             
             <iframe
                 src={video.URL} >

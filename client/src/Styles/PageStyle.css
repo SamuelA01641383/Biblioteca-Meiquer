@@ -141,10 +141,9 @@ img{
 }
 .centrar{
   margin: auto;
-  width: 50%;
+  width: 75%;
 }
 .libros{
-  height: 8vh;
-  width: 5vh;
-
+  height:40vh;
+  width: 30vh;
 }
