@@ -19,7 +19,7 @@ const DashboardAcompanante= () => {
     return(
         <div>
     <div className='navbar2'>
-        <h1 className='btt'>Selecciona el contenido: </h1>
+        <h1>Selecciona el contenido: </h1>
         <button className='btt' onClick={()=>cambiarTipo(3)}>Actividades</button>
         <button className='btt' onClick={()=>cambiarTipo(2)}>Libros</button>
         <button className='btt' onClick={()=>cambiarTipo(1)}>Videos</button>
@@ -51,7 +51,7 @@ const DashboardAcompanante= () => {
                           </context.Provider>
 
           case 4:  return "Not yet";
-          
+
           default: return "Not Found";
         }
       })()}

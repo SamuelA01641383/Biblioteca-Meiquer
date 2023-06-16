@@ -90,7 +90,7 @@ app.get("/Actividades", (req, res)=>{
 //Obtiene todos las Actividades por filtro de 1 etiqueta 
 app.get("/Actividades/:nombre", (req, res)=>{
     const nombre = req.params.nombre
-    const q = "SELECT contenido.ID_Contenido, contenido.Nombre AS nomCont, etiquetas.Nombre, Descripcion FROM contenido INNER JOIN actividades USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = contenido.ID_Contenido AND etiquetas.Nombre= ?"
+    const q = "SELECT contenido.ID_Contenido, contenido.Nombre AS nomCont, etiquetas.Nombre, Descripcion FROM contenido INNER JOIN actividades USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = actividades.ID_Contenido AND etiquetas.Nombre= ?"
     db.query(q,[nombre],(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
