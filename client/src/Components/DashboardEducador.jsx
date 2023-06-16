@@ -1,24 +1,30 @@
 import '../Styles/PageStyle.css'
 import Videos from './Videos'
 import Libros from './Libros'
+import Actividades from './Actividades'
+import Referencias from './Referencias'
 import { useState } from 'react';
 import { Component } from 'react';
 import { createContext} from 'react';
-
-export const context = createContext();
+import {context} from "./Dashboard";
 
 const DashboardEducador= () => {
     const [cargar, setCargar] = useState(1)
     const [etiqueta, setEtiqueta] = useState("")
 
+    const cambiarTipo = async (tipo)=>{
+      setEtiqueta("")
+      setCargar(tipo)
+  }
+
     return(
         <div>
     <div className='navbar2'>
         <h1>Selecciona el contenido: </h1>
-        <button className='btt' onClick={()=>setCargar(2)}>Referencias</button>
-        <button className='btt' onClick={()=>setCargar(2)}>Actividades</button>
-        <button className='btt' onClick={()=>setCargar(2)}>Libros</button>
-        <button className='btt' onClick={()=>setCargar(1)}>Videos</button>
+        <button className='btt' onClick={()=>cambiarTipo(4)}>Referencias</button>
+        <button className='btt' onClick={()=>cambiarTipo(3)}>Actividades</button>
+        <button className='btt' onClick={()=>cambiarTipo(2)}>Libros</button>
+        <button className='btt' onClick={()=>cambiarTipo(1)}>Videos</button>
     </div>
     <div className='navbar'>
         <div>
@@ -38,9 +44,18 @@ const DashboardEducador= () => {
                             <Videos></Videos>
                           </context.Provider>
 
-          case 2:  return <Libros></Libros>
-          case 3:  return "Not yet";
-          case 4:  return "Not yet";
+          case 2:  return <context.Provider value={etiqueta}>
+                            <Libros></Libros>
+                           </context.Provider>
+
+          case 3:  return <context.Provider value={etiqueta}>
+                            <Actividades></Actividades>
+                          </context.Provider>
+
+          case 4:  return <context.Provider value={etiqueta}>
+                            <Referencias></Referencias>
+                          </context.Provider>
+
           default: return "Not Found";
         }
       })()}

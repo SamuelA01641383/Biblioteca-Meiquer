@@ -89,7 +89,7 @@ app.get("/Referencias", (req, res)=>{
 
 app.get("/Referencias/:nombre", (req, res)=>{
     const nombre = req.params.nombre
-    const q = "SELECT contenido.ID_Contenido, contenido.Nombre as nomCont, etiquetas.Nombre, NombreArticulo, NombrePagina FROM contenido INNER JOIN Referencias USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = Referencias.ID_Contenido AND etiquetas.Nombre=?"
+    const q = "SELECT contenido.ID_Contenido, contenido.Nombre as nomCont, etiquetas.Nombre, NombreArticulo, NombrePagina FROM contenido INNER JOIN referencias USING(ID_contenido) INNER JOIN contenido_etiqueta USING(ID_contenido) INNER JOIN etiquetas USING(ID_Etiqueta) WHERE contenido.ID_Contenido = referencias.ID_Contenido AND etiquetas.Nombre= ?"
     db.query(q,[nombre],(err,data)=>{
         if(err) return res.json(err)
         return res.json(data)
