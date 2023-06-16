@@ -16,7 +16,7 @@ const Rutas = () => {
         <Route path='/Educador' element = {<Educador/>} />
         <Route path='/InformacionVideo/:id' element = {<InformacionVideo/>} />
         <Route path='/InformacionLibros/:id' element = {<InformacionLibros/>} />
-        <Route path='/InformacionActividades' element = {<InformacionLibros/>} />
+        <Route path='/InformacionActividades/:id' element = {<InformacionActividades/>} />
         
     </Routes>
     </BrowserRouter>
