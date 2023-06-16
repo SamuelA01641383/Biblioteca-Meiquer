@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
-
 import NavBar from './NavBar'
+
 const InformacionVideo = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const location = useLocation()
     const [contenido, setContenido] = useState([])
 
@@ -28,6 +28,10 @@ const InformacionVideo = () => {
     },[])
 
     console.log(contenido)
+
+    const handleGoBack = () => {
+        navigate(-1);
+    };
     return (
         <div className='bg2'>
         <NavBar></NavBar>
@@ -46,6 +50,9 @@ const InformacionVideo = () => {
                     ))
                 }
         </div>
+            
+            <button className="bt_atras" onClick={handleGoBack}>Atrás</button>
+
         </div>
     )
 

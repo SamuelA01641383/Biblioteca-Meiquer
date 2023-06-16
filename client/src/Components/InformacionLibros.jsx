@@ -1,8 +1,13 @@
 import '../Styles/Informacion.css'
 import NavBar from './NavBar'
+import { useNavigate } from 'react-router-dom';
 
 const InformacionLibros = () => {
+    const navigate = useNavigate();
 
+    const handleGoBack = () => {
+        navigate(-1);
+    };
     return (
 
         <div className='bg'>
@@ -17,6 +22,7 @@ const InformacionLibros = () => {
             <h2>paginas: </h2>
             <a href='https://hola.com'>Descargar Libros</a>
             </div>
+            <button className="bt_atras" onClick={handleGoBack}>Atrás</button>
         </div>
 
     )
