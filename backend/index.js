@@ -85,6 +85,7 @@ app.get("/Referencias", (req, res)=>{
         return res.json(data)
     })
 })
+// SELECT c.contenido_ID, c.Nombre, c.URL, r.NombreArticulo, r.NombrePagina FROM contenido c INNER JOIN Referencias r USING(ID_contenido) INNER JOIN contenido_etiqueta ce USING(ID_contenido) INNER JOIN etiquetas e USING(ID_Etiqueta) WHERE c.ID_Contenido = r.ID_Contenido AND etiquetas.Nombre = ?
 
 
 app.get("/Referencias/:nombre", (req, res)=>{
