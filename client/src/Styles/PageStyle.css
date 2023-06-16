@@ -3,7 +3,7 @@ body{
   margin: 0;
   padding: 0;
 }
-.navbar2{
+.navegacion{
   float: left;
   width: 90%;
   margin-left: 5%;
@@ -13,7 +13,7 @@ body{
   padding-bottom: 1vh;
   border-radius: 10px;
 }
-.navbar{
+.navegacion2{
     float: left;
     width: 90%;
     padding-bottom: 1vh;
@@ -26,12 +26,12 @@ body{
 .bg {
     float: left;
     width: 100%;
-    background-color: rgb(247,239,238);
+    background-color: rgb(115,136,153);
   }
 .bg2{
   float: left;
   width: 100%;
-  background-color: rgb(247,239,238);
+  background-color: rgb(115,136,153);
 }
 .left{
   float: left;
@@ -84,7 +84,20 @@ button{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin-left: 2.5vh;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.bigbtt{
+  background-color: #3F51B5;
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin-left: 2.5vh;
   cursor: pointer;
   border-radius: 8px;
 }

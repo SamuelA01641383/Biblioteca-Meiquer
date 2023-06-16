@@ -5,7 +5,7 @@ import Alumno from "../Pages/Alumno"
 import Educador from "../Pages/Educador"
 import InformacionVideo from "../Components/InformacionVideo"
 import InformacionLibros from "../Components/InformacionLibros"
-
+import InformacionActividades from "../Components/InformacionActividades"
 const Rutas = () => {
   return (
     <BrowserRouter>
@@ -16,6 +16,8 @@ const Rutas = () => {
         <Route path='/Educador' element = {<Educador/>} />
         <Route path='/InformacionVideo' element = {<InformacionVideo/>} />
         <Route path='/InformacionLibros' element = {<InformacionLibros/>} />
+        <Route path='/InformacionActividades' element = {<InformacionLibros/>} />
+        
     </Routes>
     </BrowserRouter>
   )
