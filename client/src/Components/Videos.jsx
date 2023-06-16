@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { Link } from "react-router-dom";
-//import videos from '../imagenes/videos.png'
+import '../Styles/PageStyle.css'
 import {context} from "./Dashboard"
 
 const PORT = process.env.PORT || 3001;
