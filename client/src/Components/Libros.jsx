@@ -14,7 +14,7 @@ const Libros = () => {
     const etiqueta = useContext(context);
 
     useEffect(()=>{
-        const fetchAlumno = async ()=>{
+        const fetchLibros = async ()=>{
             try{
                 if(etiqueta == ""){
                     const res = await axios.get("http://localhost:8800/Libros")
@@ -28,7 +28,7 @@ const Libros = () => {
                 console.log(err)
             }
         }
-        fetchAlumno()
+        fetchLibros()
     },[etiqueta])
 
     console.log(contenido)   

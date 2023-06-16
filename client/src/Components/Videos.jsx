@@ -13,7 +13,7 @@ const Videos = () => {
     const etiqueta = useContext(context);
 
     useEffect(()=>{
-        const fetchAlumno = async ()=>{
+        const fetchVideos = async ()=>{
             try{
                 if(etiqueta == ""){
                     const res = await axios.get("http://localhost:8800/Videos")
@@ -26,7 +26,7 @@ const Videos = () => {
                 console.log(err)
             }
         }
-        fetchAlumno()
+        fetchVideos()
     },[etiqueta])
 
    

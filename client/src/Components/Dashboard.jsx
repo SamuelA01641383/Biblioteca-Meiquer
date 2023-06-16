@@ -11,12 +11,16 @@ const Dashboard= () => {
     const [cargar, setCargar] = useState(1)
     const [etiqueta, setEtiqueta] = useState("")
 
+    const cambiarTipo = async (tipo)=>{
+        setEtiqueta("")
+        setCargar(tipo)
+    }
     return(
         <div>
     <div className='navbar2'>
         <h1 className='btt'>Selecciona el contenido: </h1>
-        <button className='btt' onClick={()=>setCargar(2)}>Libros</button>
-        <button className='btt' onClick={()=>setCargar(1)}>Videos</button>
+        <button className='btt' onClick={()=>cambiarTipo(2)}>Libros</button>
+        <button className='btt' onClick={()=>cambiarTipo(1)}>Videos</button>
     </div>
     <div className='navbar'>
         <div>
@@ -39,7 +43,7 @@ const Dashboard= () => {
           case 2:  return <context.Provider value={etiqueta}>
                              <Libros></Libros>
                           </context.Provider>
-                          
+
           case 3:  return "Not yet";
           case 4:  return "Not yet";
           default: return "Not Found";
