@@ -4,13 +4,14 @@ import RightComponent from "../Components/RightComponent";
 import '../Styles/PageStyle.css'
 import NavBar from "../Components/NavBar";
 import DashboardAcompanante from "../Components/DashboardAcompanante";
+import DashboardEducador from "../Components/DashboardEducador";
 
 function Acompañante(){
 
     return(
         <div className = 'bg'>
                 <NavBar></NavBar>
-                <DashboardAcompanante></DashboardAcompanante>
+                <DashboardEducador></DashboardEducador>
                 
                 
                 
