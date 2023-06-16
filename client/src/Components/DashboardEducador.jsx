@@ -1,11 +1,12 @@
 import '../Styles/PageStyle.css'
 import Videos from './Videos'
 import Libros from './Libros'
+import Actividades from './Actividades'
+import Referencias from './Referencias'
 import { useState } from 'react';
 import { Component } from 'react';
 import { createContext} from 'react';
-
-export const context = createContext();
+import {context} from "./Dashboard";
 
 const DashboardEducador= () => {
     const [cargar, setCargar] = useState(1)
@@ -107,9 +108,18 @@ const DashboardEducador= () => {
                             <Videos></Videos>
                           </context.Provider>
 
-          case 2:  return <Libros></Libros>
-          case 3:  return "Not yet";
-          case 4:  return "Not yet";
+          case 2:  return <context.Provider value={etiqueta}>
+                            <Libros></Libros>
+                           </context.Provider>
+
+          case 3:  return <context.Provider value={etiqueta}>
+                            <Actividades></Actividades>
+                          </context.Provider>
+
+          case 4:  return <context.Provider value={etiqueta}>
+                            <Referencias></Referencias>
+                          </context.Provider>
+
           default: return "Not Found";
         }
       })()}
