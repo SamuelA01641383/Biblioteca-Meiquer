@@ -15,7 +15,7 @@ const Dashboard= () => {
         setEtiqueta("")
         setCargar(tipo)
     }
-    
+     
     return(
         <div className={style.bg2}>
         <div className={style.bg}>
