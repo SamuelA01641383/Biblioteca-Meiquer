@@ -26,8 +26,8 @@ const InformacionVideo = () => {
                 
             </div>
             
-            <button onClick={handleGoBack}>Atrás</button>
-            
+            <button className="bt_atras" onClick={handleGoBack}>Atrás</button>
+
         </div>
     )
 

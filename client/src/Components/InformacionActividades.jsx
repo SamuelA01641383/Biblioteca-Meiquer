@@ -21,7 +21,7 @@ const InformacionActividades = () => {
             <h2>paginas: </h2>
             <a href='https://hola.com'>Descargar Libros</a>
             </div>
-            <button onClick={handleGoBack}>Atrás</button>
+            <button className="bt_atras" onClick={handleGoBack}>Atrás</button>
         </div>
 
     )
