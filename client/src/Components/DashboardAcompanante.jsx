@@ -26,13 +26,13 @@ const DashboardAcompanante= () => {
     </div>
     <div className='navbar'>
         <div>
-            <button onClick={()=>setEtiqueta("Ciencia")}>Ciencia</button>
-            <button onClick={()=>setEtiqueta("Matematicas")}>Matematicas</button>
-            <button onClick={()=>setEtiqueta("Tecnologia")}>Tecnología</button>
-            <button onClick={()=>setEtiqueta("Ingenieria")}>Ingeniería</button>
-            <button onClick={()=>setEtiqueta("Pintura")}>Pintura</button>
-            <button onClick={()=>setEtiqueta("Musica")}>Musica</button>
-            <button onClick={()=>setEtiqueta("Arte")}>Arte</button>
+            <button className='btt' onClick={()=>setEtiqueta("Ciencia")}>Ciencia</button>
+            <button className='btt' onClick={()=>setEtiqueta("Matematicas")}>Matematicas</button>
+            <button className='btt' onClick={()=>setEtiqueta("Tecnologia")}>Tecnología</button>
+            <button className='btt' onClick={()=>setEtiqueta("Ingenieria")}>Ingeniería</button>
+            <button className='btt' onClick={()=>setEtiqueta("Pintura")}>Pintura</button>
+            <button className='btt' onClick={()=>setEtiqueta("Musica")}>Musica</button>
+            <button className='btt' onClick={()=>setEtiqueta("Arte")}>Arte</button>
             </div>
     </div>
     <div>

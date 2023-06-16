@@ -14,7 +14,7 @@ const DashboardEducador= () => {
     return(
         <div>
     <div className='navbar2'>
-        <h1 className='btt'>Selecciona el contenido: </h1>
+        <h1>Selecciona el contenido: </h1>
         <button className='btt' onClick={()=>setCargar(2)}>Referencias</button>
         <button className='btt' onClick={()=>setCargar(2)}>Actividades</button>
         <button className='btt' onClick={()=>setCargar(2)}>Libros</button>
@@ -22,13 +22,13 @@ const DashboardEducador= () => {
     </div>
     <div className='navbar'>
         <div>
-            <button onClick={()=>setEtiqueta("Ciencia")}>Ciencia</button>
-            <button onClick={()=>setEtiqueta("Matematicas")}>Matematicas</button>
-            <button onClick={()=>setEtiqueta("Tecnologia")}>Tecnología</button>
-            <button onClick={()=>setEtiqueta("Ingenieria")}>Ingeniería</button>
-            <button onClick={()=>setEtiqueta("Pintura")}>Pintura</button>
-            <button onClick={()=>setEtiqueta("Musica")}>Musica</button>
-            <button onClick={()=>setEtiqueta("Arte")}>Arte</button>
+            <button className='btt' onClick={()=>setEtiqueta("Ciencia")}>Ciencia</button>
+            <button className='btt' onClick={()=>setEtiqueta("Matematicas")}>Matematicas</button>
+            <button className='btt' onClick={()=>setEtiqueta("Tecnologia")}>Tecnología</button>
+            <button className='btt' onClick={()=>setEtiqueta("Ingenieria")}>Ingeniería</button>
+            <button className='btt' onClick={()=>setEtiqueta("Pintura")}>Pintura</button>
+            <button className='btt' onClick={()=>setEtiqueta("Musica")}>Musica</button>
+            <button className='btt' onClick={()=>setEtiqueta("Arte")}>Arte</button>
             </div>
     </div>
     <div>

@@ -7,4 +7,4 @@ function Informacion(){
     }
 
 
-export default informacion
+export default Informacion
