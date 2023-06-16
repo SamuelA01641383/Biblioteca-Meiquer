@@ -9,8 +9,9 @@ body{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 1vh;
-    background-color: rgb(115,136,153);
+    background-color: #FFF2D3;
     padding-bottom: 1vh;
+    border-radius: 10px;
   }
   .navbar{
       float: left;
@@ -19,7 +20,7 @@ body{
       margin-top: 3vh;
       margin-left: 5%;
       margin-right: 5%;
-      background-color: rgb(115,136,153);
+      background-color: #FFF2D3;
       border-radius: 10px;
     }
   .bg {
@@ -96,4 +97,7 @@ body{
   }
   .navcolor{
     background-color: rgb(72,85,104);
+  }
+  .selecciona{
+    color: #5C4B51;
   }
