@@ -9,12 +9,14 @@ import DashboardEducador from "../Components/DashboardEducador";
 function Acompañante(){
 
     return(
-        <div className = 'bg'>
+        <div className="bg">
+        <div className = 'bg2'>
                 <NavBar></NavBar>
                 <DashboardEducador></DashboardEducador>
                 
                 
                 
+        </div>
         </div>
     )
 

@@ -1,11 +1,12 @@
 .bg{
   background-color: darkcyan;
-  height: 100%;
+ 
 }
 .bg2{
     width: 100%;
     background-color: darkcyan;
-}
+    height: 100vh;
+  }
 body{
     padding: 0;
     margin: 0;
@@ -76,5 +77,9 @@ body{
     padding: 20px;
     border-radius: 10px;
     margin-left: 20px;
+  }
+  .cover{
+    width: 25rem;
+    height: 35rem;
   }
   

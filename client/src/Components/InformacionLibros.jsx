@@ -33,16 +33,16 @@ const InformacionLibros = () => {
     };
     return (
 
-        <div className='bg'>
+        <div className='bg2'>
             <NavBar></NavBar>
-            <div className='bg2'>
+            <div className='bg'>
             {
                     contenido.map(v=>(
                     <div className='derecho'>
                         <h1>{v.Nombre}</h1>
                         <h1>{v.Paginas} Paginas</h1>
                         <h2>{v.Descripcion}</h2>
-                        <img src ={v.Imagen}></img>
+                        <img className='cover' src ={v.Imagen}></img>
                         <div className='left'>
             <a href={v.URL}>Descargar Libros</a>
             </div>
@@ -50,9 +50,9 @@ const InformacionLibros = () => {
                     ))
             }
             
-           
-            </div>
             <button className="bt_atras" onClick={handleGoBack}>Atrás</button>
+            </div>
+            
         </div>
 
     )
