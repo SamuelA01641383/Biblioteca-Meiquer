@@ -1,8 +1,14 @@
 import '../Styles/Informacion.css'
 import Alumno from '../imagenes/alumnos.png'
 import NavBar from './NavBar'
-const InformacionVideo = () => {
+import { useNavigate } from 'react-router-dom';
 
+const InformacionVideo = () => {
+    const navigate = useNavigate();
+
+    const handleGoBack = () => {
+        navigate(-1);
+    };
     return (
         <div className='bg2'>
         <NavBar></NavBar>
@@ -19,6 +25,9 @@ const InformacionVideo = () => {
                 </div>
                 
             </div>
+            
+            <button onClick={handleGoBack}>Atrás</button>
+            
         </div>
     )
 
