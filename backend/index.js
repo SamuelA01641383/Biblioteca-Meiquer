@@ -69,6 +69,16 @@ app.get("/Videos/:nombre", (req, res)=>{
     })
 })
 
+//Obtiene 1 libro
+app.get("/Libro/:id", (req, res)=>{
+    const id = req.params.id
+    const q = "SELECT * FROM libros  INNER JOIN contenido USING(ID_Contenido) WHERE libros.ID_Contenido = ?;"
+    db.query(q,[id],(err,data)=>{
+        if(err) return res.json(err)
+        return res.json(data)
+    })
+})
+
 //Obtiene todos los libros y sus detalles 
 app.get("/Libros", (req, res)=>{
     const q = "SELECT contenido.ID_Contenido, Nombre AS nomCont, URL, Paginas FROM contenido INNER JOIN Libros WHERE contenido.Tipo =2 AND contenido.ID_Contenido = Libros.ID_Contenido"

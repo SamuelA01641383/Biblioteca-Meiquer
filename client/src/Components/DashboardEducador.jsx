@@ -21,7 +21,7 @@ const DashboardEducador= () => {
       <div className='bg2'>
       <div className='bg'>
   <div className='navegacion2'>
-      <button className='bigbtt' onClick={()=>cambiarTipo(3)}>
+      <button className='bigbtt' onClick={()=>cambiarTipo(4)}>
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmarks" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M13 7a2 2 0 0 1 2 2v12l-5 -3l-5 3v-12a2 2 0 0 1 2 -2h6z" />
