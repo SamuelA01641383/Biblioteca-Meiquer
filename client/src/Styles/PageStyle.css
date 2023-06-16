@@ -28,6 +28,11 @@ body{
     width: 100%;
     background-color: rgb(247,239,238);
   }
+.bg2{
+  float: left;
+  width: 100%;
+  background-color: rgb(247,239,238);
+}
 .left{
   float: left;
   width: 100%;
@@ -45,14 +50,17 @@ body{
   padding-bottom: 2.5vh;
   margin-top: 2vh;
   margin-right: 2vh;
+  min-height: 50%;
 }
 
 .contenedortexto{
   
 
-  margin-top: 2.5vh;
-  margin-left: 2.5vh;
-  margin-right: 2vh;
+  margin-bottom: 2.5vh;
+}
+.titulo{
+  font-size: 3vh;
+  text-align: center;
 }
 
 .centrarboton{

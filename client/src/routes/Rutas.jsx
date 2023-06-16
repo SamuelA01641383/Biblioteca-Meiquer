@@ -4,6 +4,7 @@ import Main from "../Components/Main"
 import Alumno from "../Pages/Alumno"
 import Educador from "../Pages/Educador"
 import InformacionVideo from "../Components/InformacionVideo"
+import InformacionLibros from "../Components/InformacionLibros"
 
 const Rutas = () => {
   return (
@@ -14,6 +15,7 @@ const Rutas = () => {
         <Route path='/Alumno' element = {<Alumno/>} />
         <Route path='/Educador' element = {<Educador/>} />
         <Route path='/InformacionVideo' element = {<InformacionVideo/>} />
+        <Route path='/InformacionLibros' element = {<InformacionLibros/>} />
     </Routes>
     </BrowserRouter>
   )
