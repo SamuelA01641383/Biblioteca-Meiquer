@@ -36,7 +36,6 @@ const InformacionLibros = () => {
         <div className='bg'>
             <NavBar></NavBar>
             <div className='bg2'>
-            <div className='left'></div>
             {
                     contenido.map(v=>(
                     <div className='derecho'>
@@ -45,8 +44,11 @@ const InformacionLibros = () => {
                         <h2>Esto es la descripcion bababababababbabbababab   </h2>
                     </div>
                     ))
-                }
+            }
+            <div className='left'>
             <a href='https://hola.com'>Descargar Libros</a>
+            </div>
+           
             </div>
             <button className="bt_atras" onClick={handleGoBack}>Atrás</button>
         </div>
