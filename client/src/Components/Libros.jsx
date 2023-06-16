@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { Link } from "react-router-dom";
-import libros from '../imagenes/libros.png'
 import {context} from "./Dashboard"
 import { useContext } from 'react';
 import '../Styles/PageStyle.css'
@@ -45,8 +44,9 @@ const Libros = () => {
                     <Link to={`/InformacionLibros/${libro.ID_Contenido}`} style={{ textDecoration: 'none' }}>
             <div className="card" style={{width: "18rem"}}>
                 <div className='centrar'>
+                { <img src={libro.Imagen} className="libros"  alt="..."/>}
                  </div>
-            { <img src={libro.Imagen} className="card-img-top" width="100" height="100" alt="..."/>}
+           
 
             <div className="card-body">
                 <h5 className="titulo">{libro.nomCont}</h5>
