@@ -5,11 +5,9 @@ function Informacion(){
 
         return(
 
-                <div className='bg'>
-
-
-                    
-                </div>
+               <div className='bg'>
+                        <a href="../imagenes/acompa.jpeg" download="acompa.jpeg">Descargar archivo</a>
+               </div>
 
 
 
