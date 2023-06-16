@@ -1,4 +1,4 @@
-import '../Styles/Informacion.css'
+import '../Styles/InformacionVideo.css'
 import NavBar from './NavBar'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
