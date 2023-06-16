@@ -15,6 +15,7 @@ const Dashboard= () => {
         setEtiqueta("")
         setCargar(tipo)
     }
+    
     return(
         <div>
     <div className={style.navbar2}>
