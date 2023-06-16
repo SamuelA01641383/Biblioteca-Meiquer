@@ -139,3 +139,7 @@ img{
 .navcolor{
   background-color: rgb(72,85,104);
 }
+.centrar{
+  margin: auto;
+  width: 50%;
+}
