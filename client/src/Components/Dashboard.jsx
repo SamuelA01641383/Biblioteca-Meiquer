@@ -19,7 +19,7 @@ const Dashboard= () => {
     return(
         <div>
     <div className={style.navbar2}>
-        <h1 className="selecciona">Selecciona el contenido: </h1>
+        <h1 className={style.selecciona}>Selecciona el contenido: </h1>
         <button className={style.btt} onClick={()=>cambiarTipo(2)}>Libros</button>
         <button className={style.btt} onClick={()=>cambiarTipo(1)}>Videos</button>
     </div>
