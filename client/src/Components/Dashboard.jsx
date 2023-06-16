@@ -1,4 +1,4 @@
-import '../Styles/PageStyle.css'
+import style from '../Styles/Dashboard.module.css'
 import Videos from './Videos'
 import Libros from './Libros'
 import { useState } from 'react';
@@ -17,20 +17,20 @@ const Dashboard= () => {
     }
     return(
         <div>
-    <div className='navbar2'>
-        <h1 className='btt'>Selecciona el contenido: </h1>
-        <button className='btt' onClick={()=>cambiarTipo(2)}>Libros</button>
-        <button className='btt' onClick={()=>cambiarTipo(1)}>Videos</button>
+    <div className={style.navbar2}>
+        <h1 className="selecciona">Selecciona el contenido: </h1>
+        <button className={style.btt} onClick={()=>cambiarTipo(2)}>Libros</button>
+        <button className={style.btt} onClick={()=>cambiarTipo(1)}>Videos</button>
     </div>
-    <div className='navbar'>
+    <div className={style.navbar}>
         <div>
-            <button onClick={()=>setEtiqueta("Ciencia")}>Ciencia</button>
-            <button onClick={()=>setEtiqueta("Matematicas")}>Matematicas</button>
-            <button onClick={()=>setEtiqueta("Tecnologia")}>Tecnología</button>
-            <button onClick={()=>setEtiqueta("Ingenieria")}>Ingeniería</button>
-            <button onClick={()=>setEtiqueta("Pintura")}>Pintura</button>
-            <button onClick={()=>setEtiqueta("Musica")}>Musica</button>
-            <button onClick={()=>setEtiqueta("Arte")}>Arte</button>
+            <button className={style.btt} onClick={()=>setEtiqueta("Ciencia")}>Ciencia</button>
+            <button className={style.btt} onClick={()=>setEtiqueta("Matematicas")}>Matematicas</button>
+            <button className={style.btt} onClick={()=>setEtiqueta("Tecnologia")}>Tecnología</button>
+            <button className={style.btt} onClick={()=>setEtiqueta("Ingenieria")}>Ingeniería</button>
+            <button className={style.btt} onClick={()=>setEtiqueta("Pintura")}>Pintura</button>
+            <button className={style.btt} onClick={()=>setEtiqueta("Musica")}>Musica</button>
+            <button className={style.btt} onClick={()=>setEtiqueta("Arte")}>Arte</button>
             </div>
     </div>
     <div>

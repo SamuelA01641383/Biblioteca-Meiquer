@@ -31,7 +31,6 @@ body{
   float: left;
   width: 100%;
   border-radius: 10%;
-  height: 100vh;
 }
 .contenedorDeContenedores{
   float: left;
@@ -74,12 +73,20 @@ button{
   
 }
 .btt{
-  float: left;
-  margin-top: 1vh;
-  margin-left: 2vh;
-  font-size: 5vh;
-  padding: 0.20vh;
-  
+  background-color: #3F51B5;
+  color: #FFF;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.btt:hover {
+  background-color: #303F9F;
 }
 .portada{
   float: left;
@@ -95,7 +102,7 @@ img{
 }
 
 .logo{
-  width: 2.5vh;
+  width: 5vh;
   height: 2.5vh;
 }
 .navcolor{
