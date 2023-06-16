@@ -87,6 +87,9 @@ button{
   margin-left: 2.5vh;
   cursor: pointer;
   border-radius: 8px;
+  transition: .5s, color .10s;
+      -webkit-transition: .5s, color .10s;
+      -moz-transition: .5s, color .10s;
 }
 .bigbtt{
   background-color: #3F51B5;
@@ -100,9 +103,21 @@ button{
   margin-left: 2.5vh;
   cursor: pointer;
   border-radius: 8px;
+  transition: .5s, color .10s;
+      -webkit-transition: .5s, color .10s;
+      -moz-transition: .5s, color .10s;
 }
 .btt:hover {
   background-color: #303F9F;
+  transform: scale3d(1.2, 1.2, 0.3);
+      -webkit-transform: scale3d(1.2, 1.2, 0.3);
+      -moz-transform: scale3d(1.2, 1.2, 0.3);
+}
+.bigbtt:hover {
+  background-color: #303F9F;
+  transform: scale3d(1.2, 1.2, 0.3);
+      -webkit-transform: scale3d(1.2, 1.2, 0.3);
+      -moz-transform: scale3d(1.2, 1.2, 0.3);
 }
 .portada{
   float: left;
