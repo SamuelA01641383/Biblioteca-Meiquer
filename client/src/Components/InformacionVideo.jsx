@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 
+import NavBar from './NavBar'
 const InformacionVideo = () => {
     const navigate = useNavigate()
     const location = useLocation()
@@ -29,24 +30,23 @@ const InformacionVideo = () => {
     console.log(contenido)
     return (
         <div className='bg2'>
-            
+        <NavBar></NavBar>
+        
             <div className='bg'>
+            <div className='izquierda'>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/3XKk-xBpB0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                {
+            </div>
+            {
                     contenido.map(v=>(
-                    <div>
+                    <div className='derecho'>
                         <h1>Nombre: {v.Nombre}</h1>
                         <h1>Duracion: {v.Duracion} </h1>
                         <h2>Esto es la descripcion bababababababbabbababab   </h2>
                     </div>
                     ))
                 }
-               
-            </div>
-            
         </div>
-
-
+        </div>
     )
 
 }

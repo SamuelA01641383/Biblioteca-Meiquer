@@ -1,7 +1,7 @@
 import '../Styles/Informacion.css'
 import NavBar from './NavBar'
 
-const InformacionLibros = () => {
+const InformacionActividades = () => {
 
     return (
 
@@ -26,4 +26,4 @@ const InformacionLibros = () => {
 
 }
 
-export default InformacionLibros
+export default InformacionActividades
