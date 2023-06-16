@@ -35,7 +35,6 @@ const Libros = () => {
     return (
         <div className='left'>
             <div className='contenedorDeContenedores'>
-            <p>"Recibido libros;" {etiqueta}</p>
             {
             contenido.map(libro=>(
             
