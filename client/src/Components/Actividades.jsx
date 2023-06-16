@@ -42,7 +42,7 @@ const Actividades = () => {
                 <div className="contenido" key={actividad.ID_Contenido}>
                     <div className='contenedor'> 
                     <Link to={`/InformacionActividades/${actividad.ID_Contenido}`} style={{ textDecoration: 'none' }}>
-            <div className="card" style={{width: "18rem"}}>
+            <div className="card" style={{width: "18rem", height:"12rem"}}>
                 <img src={actividad.Imagen} className="card-img-top" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title"><h2>{actividad.nomCont}</h2></h5>

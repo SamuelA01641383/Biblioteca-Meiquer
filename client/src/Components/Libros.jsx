@@ -42,7 +42,7 @@ const Libros = () => {
                 <div className="contenido" key={libro.ID_Contenido}>
                     <div className='contenedor'> 
                     <Link to={`/InformacionLibros/${libro.ID_Contenido}`} style={{ textDecoration: 'none' }}>
-            <div className="card" style={{width: "18rem"}}>
+            <div className="card" style={{width: "20rem", height: "26.5rem"}}>
                 <div className='centrar'>
                 { <img src={libro.Imagen} className="libros"  alt="..."/>}
                  </div>
