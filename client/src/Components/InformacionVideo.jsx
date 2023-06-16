@@ -32,6 +32,7 @@ const InformacionVideo = () => {
         navigate(-1);
     };
     return (
+        <div className='bg'>
         <div className="bg2">
         <NavBar></NavBar>
         
@@ -51,6 +52,7 @@ const InformacionVideo = () => {
                     <button className="bt_atras" onClick={handleGoBack}>Regresar</button>
                 </div>
             </div>
+        </div>
         </div>
         </div>
     )
