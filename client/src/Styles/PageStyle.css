@@ -28,13 +28,18 @@ body{
     width: 100%;
     background-color: rgb(247,239,238);
   }
+.bg2{
+  float: left;
+  width: 100%;
+  background-color: rgb(247,239,238);
+}
 .left{
   float: left;
   width: 100%;
   border-radius: 10%;
 }
 .contenedorDeContenedores{
-  float: left;
+
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
@@ -45,20 +50,17 @@ body{
   padding-bottom: 2.5vh;
   margin-top: 2vh;
   margin-right: 2vh;
+  min-height: 50%;
 }
-.contenedorimg{
-  float: left;
-  height: 15vh;
-  width: 25vh;
-  margin-top: 2.5vh;
-  margin-left: 2.5vh;
-}
+
 .contenedortexto{
   
 
-  margin-top: 2.5vh;
-  margin-left: 2.5vh;
-  margin-right: 2vh;
+  margin-bottom: 2.5vh;
+}
+.titulo{
+  font-size: 3vh;
+  text-align: center;
 }
 
 .centrarboton{

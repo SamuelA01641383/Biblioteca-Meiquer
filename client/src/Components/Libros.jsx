@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import libros from '../imagenes/libros.png'
 import {context} from "./Dashboard"
 import { useContext } from 'react';
-
+import '../Styles/PageStyle.css'
 const PORT = process.env.PORT || 3001;
 
 const Libros = () => {
@@ -42,11 +42,11 @@ const Libros = () => {
             
                 <div className="contenido" key={libro.ID_Contenido}>
                     <div className='contenedor'> 
-                    <Link to="/" style={{ textDecoration: 'none' }}>
+                    <Link to="/InformacionLibros" style={{ textDecoration: 'none' }}>
             <div className="card" style={{width: "18rem"}}>
                 <img src={libros} className="card-img-top" alt="..."/>
             <div className="card-body">
-                <h5 className="card-title"><h2>{libro.nomCont}</h2></h5>
+                <h5 className="titulo">{libro.nomCont}</h5>
                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
             </div>
