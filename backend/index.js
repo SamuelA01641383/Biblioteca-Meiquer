@@ -145,6 +145,7 @@ app.get("/Actividades/:nombre", (req, res)=>{
         if(err) return res.json(err)
         return res.json(data)
     })
+    
 })
 
 // Se define stored procedure en BD_BibliotecaMeiquer.sql
